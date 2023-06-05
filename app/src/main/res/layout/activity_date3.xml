@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181414"
+    android:orientation="vertical"
+    tools:context=".DateActivity3">
+
+    <TextView
+        android:id="@+id/dateOfBirthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/damion"
+        android:text="Whats your date of birth?"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:theme="@style/MyDatePickerStyle"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_marginTop="100dp"/>
+
+    <TextView
+        android:id="@+id/Informations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="We use this information to calculate and provide you with daily personalized reccomendations."
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#b0b0b0"
+        android:layout_marginTop="175dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="0"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_green_button"
+        android:text="Next"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:onClick="onNextButtonClick"
+        android:layout_weight="0"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "374307505513",
+    "project_id": "healthly-android",
+    "storage_bucket": "healthly-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374307505513:android:0c94701fc85143d83b29f8",
+        "android_client_info": {
+          "package_name": "com.example.healthlyandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374307505513-tpsvg98ikbngkqsgf734ou32mhcg2avd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzKpjYUbMcViKZGuhOFgt7eL-fq18dnWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374307505513-tpsvg98ikbngkqsgf734ou32mhcg2avd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181414"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Witaj Mateuszku"
+        android:fontFamily="@font/damion"
+        android:textSize="40dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/mati"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="80dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mati"
+        android:layout_marginTop="40dp"
+        android:text="Logtout"
+        android:id="@+id/logout_button"
+        android:background="@drawable/register_button"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

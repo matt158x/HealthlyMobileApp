@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181414"
+    tools:context=".ProgressActivity">
+
+    <EditText
+        android:id="@+id/achievment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Your projected progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/damion"
+        android:textSize="32dp"
+        />
+
+    <TextView
+        android:id="@+id/weight_goal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:textColor="@color/white"
+        android:layout_below="@id/achievment"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="130dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:layout_below="@id/achievment"
+        android:textColor="@color/white"
+        android:text=":"
+        android:layout_marginTop="130dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/today"
+        android:textColor="@color/white"
+        android:text="Today"
+        android:layout_below="@id/achievment"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultTextView"
+        android:textColor="@color/white"
+        android:text=":"
+        android:layout_below="@id/achievment"
+        android:layout_marginTop="230dp"
+        android:layout_marginStart="295dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/chart_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/wykres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wykres1"
+            android:scaleX="0.7"
+            android:scaleY="0.7"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chart2_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/wykres2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wykres2"
+        android:scaleX="0.7"
+        android:scaleY="0.7"/>
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.50 kg/week"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:layout_below="@id/achievment"
+        android:layout_marginTop="280dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommend"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:layout_below="@id/week"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We recommend this weight pace for long-term success"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif"
+        android:layout_below="@id/recommend"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_green_button"
+        android:text="Next"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="onNextButtonClick"
+        android:layout_below="@+id/recommend"/>
+
+
+</RelativeLayout>

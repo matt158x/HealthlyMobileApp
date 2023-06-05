@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181414"
+    android:orientation="vertical"
+    tools:context=".GenderActivity2">
+
+    <TextView
+        android:id="@+id/dateOfBirthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="Whats your gender ?"
+        android:fontFamily="@font/damion"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/male_button"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_grey_button"
+            android:text="Male"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/my_button_text_color"
+            android:onClick="onLoseWeightButtonClick"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/female_button"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_grey_button"
+            android:text="Female"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/my_button_text_color"
+            android:onClick="onGainWeightButtonClick"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Informations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="We use this information to calculate and provide you with daily personalized reccomendations."
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#b0b0b0"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_green_button"
+        android:text="Next"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:onClick="onNextButtonClick"/>
+
+</LinearLayout>
