@@ -9,6 +9,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RegisterActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
+        android:layout_marginTop="20dp"
+        android:id="@+id/logo_image">
+
+    </ImageView>
+
 
     <TextView
         android:id="@+id/createacc"
@@ -18,7 +28,8 @@
         android:textColor="@color/white"
         android:fontFamily="@font/damion"
         android:textSize="40dp"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/logo_image"
+        android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         />
 
@@ -29,25 +40,27 @@
         android:src="@drawable/back_arrow"
         android:layout_marginStart="-60dp"
         android:layout_alignStart="@+id/createacc"
-        android:layout_marginTop="65dp"/>
+        android:layout_marginTop="40dp"/>
 
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="100dp"
-            android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:padding="20dp">
 
 
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
                 android:id="@+id/signup_email"
                 android:padding="8dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:hint="Email"
                 android:drawableLeft="@drawable/ic_baseline_email_24"
                 android:drawablePadding="8dp"
@@ -55,25 +68,29 @@
 
 
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:id="@+id/signup_password"
-                android:layout_marginTop="20dp"
                 android:padding="8dp"
                 android:hint="Password"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/ic_baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:background="@drawable/edittext_bkg"/>
 
             <EditText
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:id="@+id/signup_confirm"
                 android:layout_marginTop="20dp"
                 android:padding="8dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
                 android:drawableLeft="@drawable/ic_baseline_password_24"

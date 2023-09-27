@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MealaddActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_arrow"
+        android:layout_marginTop="45dp"
+        android:id="@+id/back_button"
+        android:layout_marginStart="30dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal or ingriedient name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:id="@+id/name_text"
+        android:fontFamily="@font/alkatr">
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/name_text"
+        android:hint="Enter here"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:textColorHint="@color/grey_300"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:id="@+id/name_edit"
+        >
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Macro 100g"
+        android:layout_below="@+id/name_edit"
+        android:layout_marginTop="80dp"
+        android:textSize="25sp"
+        android:fontFamily="@font/alkatr"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/macro_text"
+        >
+
+    </TextView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="calories"
+        android:textColorHint="@color/grey_300"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:layout_below="@id/macro_text"
+        android:id="@+id/calories_edit"
+        android:fontFamily="@font/alkatr">
+
+</EditText>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="proteins"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/grey_300"
+        android:layout_below="@id/calories_edit"
+        android:id="@+id/protein_edit"
+        android:fontFamily="@font/alkatr">
+
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:hint="carbs"
+        android:textColor="@color/white"
+        android:paddingStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/grey_300"
+        android:layout_below="@id/protein_edit"
+        android:id="@+id/carbs_edit"
+        android:fontFamily="@font/alkatr">
+
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginStart="50dp"
+        android:textColorHint="@color/grey_300"
+        android:layout_marginEnd="50dp"
+        android:textColor="@color/white"
+        android:hint="fat"
+        android:paddingStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/carbs_edit"
+        android:id="@+id/fat_edit"
+        android:fontFamily="@font/alkatr">
+
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_add"
+        android:layout_below="@id/fat_edit"
+        android:text="add"
+        android:id="@+id/add_button_meal"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>

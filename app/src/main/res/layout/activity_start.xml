@@ -6,13 +6,24 @@
     android:background="@drawable/startimage"
     tools:context=".StartActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:layout_marginTop="10dp">
+
+    </ImageView>
+
     <TextView
         android:id="@+id/text_logo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Healthly"
-        android:textSize="70dp"
-        android:layout_marginTop="15dp"
+        android:textSize="50dp"
+        android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/damion"
         android:textColor="@color/black"/>
@@ -21,25 +32,30 @@
         android:id="@+id/text_logo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/text_logo1"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:text="Healthly Lifestyle \n      Simplified."
         android:textColor="@color/white"
         android:textSize="50dp"
-        android:fontFamily="@font/damion"
-        android:layout_marginTop="340dp"/>
+        android:fontFamily="@font/damion" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/start_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/text_logo2"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
         android:background="@drawable/rounded_green_button"
         android:text="Let's Get Started"
         android:textAllCaps="false"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
         android:fontFamily="sans-serif"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -54,24 +70,23 @@
         android:textColor="@color/white"
         android:fontFamily="sans-serif"
         android:textSize="18dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:layout_below="@id/start_button"
         android:layout_marginTop="10dp"
-        />
+        android:layout_gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/login_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/informations"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
         android:text="Log In"
+        android:layout_marginBottom="40dp"
+        android:layout_gravity="center_horizontal"
         android:textColor="#15ffaa"
         android:textSize="20sp"
         android:textStyle="bold" />
+
+</LinearLayout>
+
 
 
 </RelativeLayout>

@@ -2,4 +2,10 @@
 <resources>
     <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.DatePicker">
         <item name="android:textColorPrimary">#616161</item>
-    </style></resources>
+
+    </style>
+
+
+
+
+</resources>

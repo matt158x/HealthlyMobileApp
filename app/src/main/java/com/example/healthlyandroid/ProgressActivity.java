@@ -1,13 +1,16 @@
 package com.example.healthlyandroid;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
+import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -22,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormatSymbols;
 import java.util.Calendar;
-
+import java.util.Objects;
 
 
 public class ProgressActivity extends AppCompatActivity {
@@ -45,12 +48,29 @@ public class ProgressActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
 
+
+        // Ustaw pasek stanu na transparentny
+        setStatusBarTransparent();
+    }
+
+    private void setStatusBarTransparent() {
+        Window window = getWindow();
+        if (window != null) {
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            window.setStatusBarColor(android.graphics.Color.TRANSPARENT);
+        }
+
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
         resultTextView = findViewById(R.id.resultTextView);
         weightTextView = findViewById(R.id.weight);
         weightGoalTextView = findViewById(R.id.weight_goal);
         calorieTextView = findViewById(R.id.calorieTextView);
         View chartContainer = findViewById(R.id.chart_container);
         View chart2Container = findViewById(R.id.chart2_container);
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();

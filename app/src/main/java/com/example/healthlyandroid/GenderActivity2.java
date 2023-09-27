@@ -1,17 +1,22 @@
 package com.example.healthlyandroid;
 
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class GenderActivity2 extends AppCompatActivity {
 
@@ -27,12 +32,30 @@ public class GenderActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gender2);
 
+
+        // Ustaw pasek stanu na transparentny
+        setStatusBarTransparent();
+    }
+
+    private void setStatusBarTransparent() {
+        Window window = getWindow();
+        if (window != null) {
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            window.setStatusBarColor(android.graphics.Color.TRANSPARENT);
+        }
+
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
+
         maleButton = findViewById(R.id.male_button);
         femaleButton = findViewById(R.id.female_button);
         nextButton = findViewById(R.id.next_button1);
 
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
 
         maleButton.setOnClickListener(new View.OnClickListener() {
             @Override

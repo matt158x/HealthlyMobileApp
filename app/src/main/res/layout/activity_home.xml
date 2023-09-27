@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#181414"
+    android:background="@drawable/gradient_background"
     tools:context=".HomeActivity">
 
     <TextView
@@ -15,15 +15,31 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/logo"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
+
         />
 
-    <LinearLayout
+
+
+    <ImageButton
+        android:id="@+id/profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_baseline_person_outline_24"
+        />
+
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@id/logo"
-        android:id="@+id/linear_calories"
+        android:id="@+id/relative_calories"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp">
 
@@ -35,8 +51,10 @@
             android:fontFamily="@font/alkatr"
             android:textColor="@color/white"
             android:textSize="32sp"
+            android:layout_marginStart="35dp"
             android:gravity="center"
-            android:layout_weight="1" />
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,8 +64,8 @@
             android:fontFamily="@font/alkatr"
             android:textColor="@color/white"
             android:textSize="50dp"
-            android:gravity="center"
-            android:layout_weight="1" />
+            android:layout_centerInParent="true"
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,57 +75,60 @@
             android:fontFamily="@font/alkatr"
             android:textColor="@color/white"
             android:textSize="32sp"
-            android:gravity="center"
-            android:layout_weight="1" />
+            android:layout_marginEnd="25dp"
+            android:gravity="right"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/relative_calories"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/relative_text_calories"
+    android:layout_marginTop="-30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear_calories"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-25dp"
-        android:id="@+id/linear_text_calories"
-        >
+        android:id="@+id/left_calories_text"
+        android:text="Eaten"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/alkatr"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/left_calories_text"
-            android:text="Eaten"
-            android:fontFamily="@font/alkatr"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_weight="1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/goal_calorie_view"
+        android:text="Goal"
+        android:fontFamily="@font/alkatr"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/goal_calorie_view"
-            android:text="Goal"
-            android:fontFamily="@font/alkatr"
-            android:textColor="@color/white"
-            android:textSize="22dp"
-            android:gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/right_calories_text"
+        android:text="Burned"
+        android:fontFamily="@font/alkatr"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/right_calories_text"
-            android:text="Burned"
-            android:fontFamily="@font/alkatr"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-    <!-- Pozostałe elementy layoutu -->
+</RelativeLayout>
 
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -116,9 +137,9 @@
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:background="@drawable/rounded_grey_home_button"
-        android:layout_below="@id/linear_text_calories"
+        android:layout_below="@id/relative_text_calories"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="40dp">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -206,18 +227,86 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/free_space"
+        android:background="@drawable/fullcupone"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="-40dp"
+        android:id="@+id/full_cup">
+
+    </ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/free_space"
+        android:layout_marginStart="100dp"
+        android:textSize="30sp"
+        android:id="@+id/water_count"
+        android:layout_marginTop="-35dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/alkatr"
+        android:text="0">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/free_space"
+        android:text="recommend 2 L"
+        android:textColor="@color/white"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="80dp">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/free_space"
+        android:text=""
+        android:textColor="@color/white"
+        android:fontFamily="@font/alkatr"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50sp"
+        android:layout_marginTop="-20sp">
+    </TextView>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/free_space"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_centerVertical="true">
+
+    </LinearLayout>
+
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/breakfast_button"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/free_space"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_grey_home_button"
         android:text="Add meal"
         android:textStyle="bold"
         android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
         android:paddingStart="20dp"
         android:textSize="18sp"
         android:textColor="@color/white"
@@ -226,22 +315,22 @@
         android:textAlignment="textStart"
         android:paddingEnd="10dp"
         android:drawablePadding="20dp"
-
     />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/lunch_button"
+        android:id="@+id/water_button"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:fontFamily="@font/alkatr"
         android:layout_below="@id/breakfast_button"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/rounded_grey_home_button"
-        android:text="Add water"
-        android:drawableStart="@drawable/lunch1"
-        android:drawablePadding="20dp"
-        android:paddingStart="20dp"
+        android:text="Add water (500ml)"
+        android:drawableStart="@drawable/fullcupone"
+        android:drawablePadding="24dp"
+        android:paddingStart="28dp"
         android:drawableEnd="@drawable/ic_round_control_point_24"
         android:textAlignment="textStart"
         android:textStyle="bold"
@@ -251,15 +340,18 @@
         android:paddingEnd="10dp"
         />
 
+
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/dinner_button"
+        android:id="@+id/workout_button"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@id/lunch_button"
-        android:drawableStart="@drawable/dinner1"
+        android:layout_below="@id/water_button"
+        android:drawableStart="@drawable/gym1"
         android:drawableEnd="@drawable/ic_round_control_point_24"
-        android:paddingStart="20dp"
+        android:paddingStart="25dp"
         android:drawablePadding="20dp"
+        android:fontFamily="@font/alkatr"
         android:textAlignment="textStart"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
@@ -272,30 +364,27 @@
         android:textAllCaps="false"
         android:textColor="@color/white" />
 
-    <!-- Pozostałe elementy layoutu -->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:id="@+id/logout_button"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/register_button"
-        android:layout_below="@+id/dinner_button"
-        android:layout_centerHorizontal="true"/>
-
-
-    <ListView
-        android:id="@+id/ingredients_list_view"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logout_button"
-        android:layout_marginTop="20dp"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        android:background="@color/white"
-        android:padding="16dp"
-        android:visibility="gone" />
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/grey_300"
+        android:background="@color/gray"
+        app:itemIconSize="40sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_above="@id/bottom_navigation"/>
+
+
+
+
 
 </RelativeLayout>
 

@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".WorkoutActivity">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_arrow"
+            android:layout_marginTop="45dp"
+            android:id="@+id/back_button"
+            android:layout_marginStart="30dp"
+            android:onClick="onBackButtonClick"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose your activity"
+            android:textColor="@color/white"
+            android:fontFamily="@font/alkatr"
+            android:textSize="30sp"
+            android:layout_margin="30sp"
+            android:layout_centerHorizontal="true">
+        </TextView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Bieg"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:textColor="@color/white"
+            android:drawableTop="@drawable/run"
+            android:background="@drawable/rounded_grey_home_button"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="120dp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Rower"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/rounded_grey_home_button"
+            android:drawableBottom="@drawable/bike"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120dp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Swim"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/rounded_grey_home_button"
+            android:drawableBottom="@drawable/swim"
+            android:layout_below="@+id/Bieg"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true">
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Rolki"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:drawableBottom="@drawable/rolls"
+            android:background="@drawable/rounded_grey_home_button"
+            android:layout_below="@+id/Rower"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true">
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/workout"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:drawableBottom="@drawable/workout"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Rolki"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp">
+    </androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>

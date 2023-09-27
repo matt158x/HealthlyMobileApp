@@ -1,10 +1,13 @@
 package com.example.healthlyandroid;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -12,6 +15,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class GoalActivity1 extends AppCompatActivity {
 
@@ -29,6 +34,21 @@ public class GoalActivity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goal1);
 
+
+        // Ustaw pasek stanu na transparentny
+        setStatusBarTransparent();
+    }
+
+    private void setStatusBarTransparent() {
+        Window window = getWindow();
+        if (window != null) {
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            window.setStatusBarColor(android.graphics.Color.TRANSPARENT);
+        }
+
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
         chooseGoalLayout = findViewById(R.id.choose_goal_layout);
         loseWeightButton = findViewById(R.id.lose_weight_button);
         gainWeightButton = findViewById(R.id.gain_weight_button);
@@ -38,6 +58,8 @@ public class GoalActivity1 extends AppCompatActivity {
 
         // Initialize Firebase database reference
         databaseReference = FirebaseDatabase.getInstance().getReference();
+
+
 
         loseWeightButton.setOnClickListener(new View.OnClickListener() {
             @Override

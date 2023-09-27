@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Kolor tła (przeźroczysty) -->
+    <stroke android:color="@color/white" android:width="1dp" /> <!-- Kolor obramowania i szerokość -->
+    <corners android:radius="20dp" /> <!-- Zaokrąglenie krawędzi -->
+</shape>
