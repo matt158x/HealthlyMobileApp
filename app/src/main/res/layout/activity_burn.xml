@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background"
@@ -163,7 +164,7 @@
             android:textSize="20sp"
             android:fontFamily="@font/alkatr"
             android:textColor="@color/white"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             />
 
         <TextView
@@ -187,10 +188,38 @@
             android:text="ADD"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="50dp">
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp">
 
         </androidx.appcompat.widget.AppCompatButton>
 
-    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemTextColor="@color/white"
+            app:itemIconTint="@color/grey_300"
+            android:background="@color/gray"
+            app:itemIconSize="40sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_above="@id/bottom_navigation"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

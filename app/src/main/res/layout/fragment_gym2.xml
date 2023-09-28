@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GymFragment2"
+    android:background="#181414">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Choose body parts to improve"
+        android:textSize="30sp"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_marginTop="40sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/button_choice4"
+            android:background="@drawable/rounded_grey_home_button"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="22sp"
+            android:fontFamily="@font/alkatr"
+            android:textAllCaps="false"
+            android:text="Chest">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_choice5"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_below="@id/button_choice4"
+            android:background="@drawable/rounded_grey_home_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="22sp"
+            android:fontFamily="@font/alkatr"
+            android:textAllCaps="false"
+            android:text="Shoulders">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_choice6"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/rounded_grey_home_button"
+            android:layout_below="@id/button_choice5"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="22sp"
+            android:fontFamily="@font/alkatr"
+            android:textAllCaps="false"
+            android:text="ABS">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_choice7"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/rounded_grey_home_button"
+            android:layout_below="@id/button_choice6"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="22sp"
+            android:fontFamily="@font/alkatr"
+            android:textAllCaps="false"
+            android:text="Legs">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</FrameLayout>

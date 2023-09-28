@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -55,6 +57,8 @@ public class HomeActivity extends AppCompatActivity {
     private TextView leftTextView;
     private TextView rightTextView;
 
+    private BottomNavigationView bottomNavigationView;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +86,36 @@ public class HomeActivity extends AppCompatActivity {
 
         waterCountTextView = findViewById(R.id.water_count);
         rightTextView = findViewById(R.id.right_text_view);
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        // Otwieranie HomeActivity
+                        startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                        return true;
+                    case R.id.diet:
+                        // Otwieranie DietActivity
+                        startActivity(new Intent(HomeActivity.this, DietActivity.class));
+                        return true;
+                    case R.id.trainingplan:
+                        // Otwieranie GymActivity
+                        startActivity(new Intent(HomeActivity.this, GymActivity.class));
+                        return true;
+                    case R.id.sleep:
+                        // Otwieranie SleepActivity
+                        startActivity(new Intent(HomeActivity.this, SleepActivity.class));
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
+
+
 
 
 
@@ -299,5 +333,4 @@ public class HomeActivity extends AppCompatActivity {
                     }
                 });
     }
-
 }

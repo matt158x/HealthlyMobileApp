@@ -1,19 +1,26 @@
 package com.example.healthlyandroid;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.Objects;
 
 public class WorkoutActivity extends AppCompatActivity {
+
+    private BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +49,36 @@ public class WorkoutActivity extends AppCompatActivity {
 
 
         Objects.requireNonNull(getSupportActionBar()).hide();
+
+
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        // Otwieranie HomeActivity
+                        startActivity(new Intent(WorkoutActivity.this, HomeActivity.class));
+                        return true;
+                    case R.id.diet:
+                        // Otwieranie DietActivity
+                        startActivity(new Intent(WorkoutActivity.this, DietActivity.class));
+                        return true;
+                    case R.id.trainingplan:
+                        // Otwieranie GymActivity
+                        startActivity(new Intent(WorkoutActivity.this, GymActivity.class));
+                        return true;
+                    case R.id.sleep:
+                        // Otwieranie SleepActivity
+                        startActivity(new Intent(WorkoutActivity.this, SleepActivity.class));
+                        return true;
+                    default:
+                        return false;
+                }
+            }
+        });
 
 
         // Przycisk "bieg"

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GymFragment3"
+    android:background="#181414">
+
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Your training"
+        android:textSize="32sp"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_marginTop="40sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="120dp">
+
+        <TextView
+            android:id="@+id/gym_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/alkatr"
+            android:gravity="center"
+            android:text="00000000"
+            android:textColor="@color/white"
+            android:textSize="24sp">
+
+        </TextView>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

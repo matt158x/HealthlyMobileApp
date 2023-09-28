@@ -95,4 +95,23 @@
         android:layout_marginEnd="30dp">
     </androidx.appcompat.widget.AppCompatButton>
 
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemTextColor="@color/white"
+            app:itemIconTint="@color/grey_300"
+            android:background="@color/gray"
+            app:itemIconSize="40sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_above="@id/bottom_navigation"/>
+
+
 </RelativeLayout>
