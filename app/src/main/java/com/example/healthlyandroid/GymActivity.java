@@ -91,24 +91,261 @@ public class GymActivity extends AppCompatActivity {
                 // Jeśli selectedChoice1 to 2 i selectedChoice2 to 2, ustaw "drugi drugi wybór"
                 text = "1. Bench Press with Barbell:\n" +
                         "\t4 sets x 6-8 reps\n" +
+                        "Begin with a warm-up using a light barbell, then gradually increase the weight.\n" +
                         "\n" +
                         "2. Incline Dumbell Press:\n" +
                         "\t3 sets x 8-10 reps\n" +
+                        "Adjust the bench to an incline to focus on the upper part of the chest.\n" +
                         "\n" +
                         "3. Dumbbell Flyes:\n" +
                         "\t3 sets x 10-12 reps\n" +
+                        "This exercise helps stretch the chest muscles.\n" +
                         "\n" +
                         "4. Machine Chest Press:\n" +
                         "\t3 sets x 6-8 reps\n" +
+                        "Using machines can aid in isolating the chest muscles.\n" +
                         "\n" +
                         "5. Dips on Parallel Bars:\n" +
                         "\t3 sets x maximum reps\n" +
+                        "Dips on parallel bars can be an excellent addition to your chest workout.\n" +
                         "\n" +
                         "6. Dumbbell Pull-over:\n" +
-                        "\t3 sets x 10-12 reps";
+                        "\t3 sets x 10-12 reps\n" +
+                        "Control the movement to isolate the chest.";
             } else {
-                // Inaczej, ustaw inny tekst zależnie od wyborów
-                text = "Tekst zależny od innych wyborów";
+                if (selectedChoice1 == 1 && selectedChoice2 == 4) {
+                    // Inaczej, ustaw inny tekst zależnie od wyborów
+                    text = "1. Bench Press with Barbell: \n" +
+                            "\t3 sets x 10-12 reps\n" +
+                            "Begin with a warm-up using a light barbell, then gradually increase the weight.\n" +
+                            "\n" +
+                            "2. Incline Dumbbell Press: \n" +
+                            "\t3 sets x 10-12 reps\n" +
+                            "Adjust the bench to an incline to focus on the upper part of the chest.\n" +
+                            "\n" +
+                            "3. Dumbbell Flyes: \n" +
+                            "\t3 sets x 12-15 reps\n" +
+                            "This exercise helps stretch the chest muscles.\n" +
+                            "\n" +
+                            "4. Machine Chest Press: \n" +
+                            "\t3 sets x 10-12 reps\n" +
+                            "Using machines can aid in isolating the chest muscles.\n" +
+                            "\n" +
+                            "5. Dips on Parallel Bars: \n" +
+                            "\t2 sets x maximum reps\n" +
+                            "Dips on parallel bars can be an excellent addition to your chest workout.";
+                } else {
+                    if (selectedChoice1 == 3 && selectedChoice2 == 4) {
+                        text = "1. Bench Press with Barbell:\n" +
+                                "\t4 sets x 4-6 reps\n" +
+                                "Begin with a warm-up using a light barbell, then gradually increase the weight.\n" +
+                                "\n" +
+                                "2. Incline Dumbell Press:\n" +
+                                "\t4 sets x 6-8 reps\n" +
+                                "Adjust the bench to an incline to focus on the upper part of the chest.\n" +
+                                "\n" +
+                                "3. Dumbbell Flyes:\n" +
+                                "\t4 sets x 8-10 reps\n" +
+                                "This exercise helps stretch the chest muscles.\n" +
+                                "\n" +
+                                "4. Machine Chest Press:\n" +
+                                "\t3 sets x 6-8 reps\n" +
+                                "Using machines can aid in isolating the chest muscles.\n" +
+                                "\n" +
+                                "\n" +
+                                "5. Dips on Parallel Bars:\n" +
+                                "\t3 sets x maximum reps\n" +
+                                "Dips on parallel bars can be an excellent addition to your chest workout.\n" +
+                                "\n" +
+                                "\n" +
+                                "6. Dumbell Pull-over:\n" +
+                                "\t4 sets x 8-10 reps\n" +
+                                "Control the movement to isolate the chest.\n" +
+                                "\n" +
+                                "\n" +
+                                "7. Flat Bench Dumbbell Raises:\n" +
+                                "\t3 sets x 8-10 repetitions\n" +
+                                "Use heavy dumbbells and control the movements.";
+                    } else {
+                        if (selectedChoice1 == 1 && selectedChoice2 == 5) {
+                            text = "1. Dumbbell Shoulder Press:\t\n" +
+                                    "\t3 sets x 10-12 reps\n" +
+                                    "Focus on controlling the movement and maintaining stability.\n" +
+                                    "\n" +
+                                    "2. Standing Barbell Upright Rows:\n" +
+                                    "\t3 sets x 10-12 reps\n" +
+                                    "Perform this exercise in a standing position.\n" +
+                                    "\n" +
+                                    "3. Lateral Raises:\n" +
+                                    "\t3 sets x 12-15 reps\n" +
+                                    "Use light dumbbells.\n" +
+                                    "\n" +
+                                    "4. Machine Lateral Raises:\n" +
+                                    "\t3 sets x 10-12 reps\n" +
+                                    "Adjust the weight according to your strength.\n" +
+                                    "\n" +
+                                    "5. Front Raises with Dumbbells:\n" +
+                                    "\t3 sets x 10-12 reps\n" +
+                                    "Use a controlled motion to lift the dumbbells.";
+                        } else {
+                            if (selectedChoice1 == 2 && selectedChoice2 == 5) {
+                                text = "1. Barbell Shoulder Press:\n" +
+                                        "\t4 sets x 8-10 reps\n" +
+                                        "Use a shoulder stabilizer.\n" +
+                                        "\n" +
+                                        "2. Standing Barbell Upright Rows:\n" +
+                                        "\t4 sets x 8-10 reps\n" +
+                                        "Increase the weight.\n" +
+                                        "\n" +
+                                        "3. Dumbbell Lateral Raises on an Incline Bench:\n" +
+                                        "\t4 sets x 10-12 reps\n" +
+                                        "Perform this exercise on an inclined bench.\n" +
+                                        "\n" +
+                                        "4. Incline Bench Dumbbell Shoulder Press:\n" +
+                                        "\t4 sets x 8-10 reps\n" +
+                                        "Focus on a full range of motion.\n" +
+                                        "\n" +
+                                        "5. Cable Lateral Raises:\n" +
+                                        "\t4 sets x 10-12 reps\n" +
+                                        "Set the cable at shoulder level.";
+                            } else {
+                                if (selectedChoice1 == 3 && selectedChoice2 == 5) {
+                                    text = "1. Overhead Barbell Press with Squat:\n" +
+                                            "\t5 sets x 6-8 reps\n" +
+                                            "Requires stability and strength.\n" +
+                                            "\n" +
+                                            "2. Dumbbell Shrugs on a Decline Bench:\n" +
+                                            "\t5 sets x 6-8 reps\n" +
+                                            "Use heavy dumbbells.\n" +
+                                            "\n" +
+                                            "3. Incline Dumbbell Lateral Raises:\n" +
+                                            "\t5 sets x 8-10 reps\n" +
+                                            "Perform this exercise on an inclined bench.\n" +
+                                            "\n" +
+                                            "4. Flat Bench Dumbbell Shoulder Press:\n" +
+                                            "\t5 sets x 6-8 reps\n" +
+                                            "Use heavy dumbbells and control the movements.\n" +
+                                            "\n" +
+                                            "5. Cable Lateral Raises:\n" +
+                                            "\t5 sets x 8-10 reps\n" +
+                                            "Set the cable at shoulder level.";
+                                } else {
+                                    if (selectedChoice1 == 1 && selectedChoice2 == 6) {
+                                        text = "1. Crunches:\n" +
+                                                "\t3 sets x 12-15 reps\n" +
+                                                "Keep your hands gently behind your head and focus on contracting your abdominal muscles.\n" +
+                                                "\n" +
+                                                "2. Leg Raises:\n" +
+                                                "\t3 sets x 10-12 reps\n" +
+                                                "Lie flat on your back and lift your legs to a 90-degree angle, engaging your lower abs.\n" +
+                                                "\n" +
+                                                "3. Planks:\n" +
+                                                "\t3 sets x 20-30 seconds\n" +
+                                                "Start with shorter durations and gradually increase the time you hold the plank position.\n" +
+                                                "\n" +
+                                                "4. Russian Twists:\n" +
+                                                "\t3 sets x 12-15 reps (each side)\n" +
+                                                "Use a light weight or a water bottle to twist and engage your obliques.";
+                                    } else {
+                                        if (selectedChoice1 == 2 && selectedChoice2 == 6) {
+                                            text = "1. Bicycle Crunches:\n" +
+                                                    "\t4 sets x 15-20 reps (each side)\n" +
+                                                    "Perform this exercise with controlled and deliberate movements.\n" +
+                                                    "\n" +
+                                                    "2. Hanging Leg Raises:\n" +
+                                                    "\t4 sets x 10-12 reps\n" +
+                                                    "If possible, use a pull-up bar to hang and raise your legs.\n" +
+                                                    "\n" +
+                                                    "3. Planks with Leg Lifts:\n" +
+                                                    "\t4 sets x 20-30 sec (each side)\n" +
+                                                    "In plank position, lift one leg at a time while maintaining stability.\n" +
+                                                    "\n" +
+                                                    "4. Side Planks:\n" +
+                                                    "\t4 sets x 20-30 sec (each side)\n" +
+                                                    "Focus on keeping your body in a straight line during side planks.";
+                                        } else {
+                                            if (selectedChoice1 == 3 && selectedChoice2 == 6) {
+                                                text = "1. Dragon Flags:\n" +
+                                                        "\t5 sets x 6-8 reps\n" +
+                                                        "Lie on a bench with your hands gripping the bench's edge and raise your legs and hips.\n" +
+                                                        "\n" +
+                                                        "2. Windshield Wipers:\n" +
+                                                        "\t5 sets x 10-12 reps (each side)\n" +
+                                                        "Hang from a pull-up bar and move your legs from side to side.\n" +
+                                                        "\n" +
+                                                        "3. Hanging Leg Raises with Twist:\n" +
+                                                        "\t5 sets x 8-10 reps (each side)\n" +
+                                                        "Perform hanging leg raises but add a twist to engage obliques.\n" +
+                                                        "\n" +
+                                                        "4. Plank to Push-Up:\n" +
+                                                        "\t5 sets x 10-12 reps\n" +
+                                                        "Start in a plank position and transition to a push-up position.";
+                                            } else {
+                                                if (selectedChoice1 == 1 && selectedChoice2 == 7) {
+                                                    text = "1. Squats:\n" +
+                                                            "\t3 sets x 10-12 reps\n" +
+                                                            "Use your body weight or light dumbbells.\n" +
+                                                            "\n" +
+                                                            "2. Lunges:\n" +
+                                                            "\t3 sets x 10-12 reps (each leg)\n" +
+                                                            "Take a step forward and bend both knees.\n" +
+                                                            "\n" +
+                                                            "3. Calf Raises:\n" +
+                                                            "\t3 sets x 15-20 reps\n" +
+                                                            "\tStand on your toes, lifting your heels.\n" +
+                                                            "\n" +
+                                                            "4. Plank:\n" +
+                                                            "\t3 sets x 20-30 sec\n" +
+                                                            "Strengthen your core and lower back.";
+                                                } else {
+                                                    if (selectedChoice1 == 2 && selectedChoice2 == 7) {
+                                                        text = "1. Squats:\n" +
+                                                                "\t4 sets x 10-12 reps\n" +
+                                                                "Use a barbell or challenging weights.\n" +
+                                                                "\n" +
+                                                                "2. Step-Ups:\n" +
+                                                                "\t4 sets x 10-12 reps (each leg)\n" +
+                                                                "Utilize a bench or platform.\n" +
+                                                                "\n" +
+                                                                "3. Leg Press:\n" +
+                                                                "\t4 sets x 10-12 reps\n" +
+                                                                "Use a leg press machine.\n" +
+                                                                "\n" +
+                                                                "4. Calf Raises:\n" +
+                                                                "\t4 sets x 15-20 reps\n" +
+                                                                "You can use additional weight.";
+                                                    } else {
+                                                        if (selectedChoice1 == 3 && selectedChoice2 == 7) {
+                                                            text = "1. Squats:\n" +
+                                                                    "\t5 sets x 8-10 reps\n" +
+                                                                    "Use heavy barbells or weights.\n" +
+                                                                    "\n" +
+                                                                    "2. Deadlifts:\n" +
+                                                                    "\t5 sets x 6-8 reps\n" +
+                                                                    "Focus on proper deadlift technique.\n" +
+                                                                    "\n" +
+                                                                    "3. Step-Ups:\n" +
+                                                                    "\t5 sets x 10-12 reps (each leg)\n" +
+                                                                    "Increase the weight or use a higher platform.\n" +
+                                                                    "\n" +
+                                                                    "4. Leg Press:\n" +
+                                                                    "\t5 sets x 8-10 reps\n" +
+                                                                    "Challenge yourself on the leg press machine.\n" +
+                                                                    "\n" +
+                                                                    "5. Seated Calf Raises:\n" +
+                                                                    "\t4 sets x 15-20 reps\n" +
+                                                                    "Utilize a machine or dumbbells.";
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 
