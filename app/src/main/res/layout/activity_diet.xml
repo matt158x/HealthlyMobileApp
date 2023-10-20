@@ -7,16 +7,34 @@
     android:background="#181414"
     tools:context=".DietActivity">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dieta"
-        android:textColor="@color/white"
+        android:text="Breakfast"
+        android:textColor="@color/grey_300"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="32sp">
+        android:textSize="28sp"
+        android:layout_marginTop="60sp"
+        android:fontFamily="@font/alkatr">
 
     </TextView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120sp"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/vietnam"
+            >
+        </ImageButton>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
