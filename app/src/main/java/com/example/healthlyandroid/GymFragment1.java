@@ -16,6 +16,9 @@ public class GymFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gym1, container, false);
 
+
+
+
         Button buttonChoice1 = view.findViewById(R.id.button1);
         Button buttonChoice2 = view.findViewById(R.id.button2);
         Button buttonChoice3 = view.findViewById(R.id.button3);
@@ -32,6 +35,9 @@ public class GymFragment1 extends Fragment {
             }
         });
 
+
+
+
         buttonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +50,7 @@ public class GymFragment1 extends Fragment {
 
             }
         });
+
 
         buttonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,5 +66,8 @@ public class GymFragment1 extends Fragment {
         });
 
         return view;
+
+
+
     }
 }

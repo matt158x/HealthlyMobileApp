@@ -58,6 +58,9 @@ public class GymActivity extends AppCompatActivity {
             }
         });
 
+
+
+
         // Ustaw GymFragment1 jako początkowy fragment
         loadFragment(new GymFragment1());
     }
