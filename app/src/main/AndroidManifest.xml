@@ -13,6 +13,27 @@
         android:theme="@style/Theme.HealthlyAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".TipsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".sleep_chronotype_result"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".sleep_chronotype"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RecipeActivity"
             android:exported="false">
             <meta-data

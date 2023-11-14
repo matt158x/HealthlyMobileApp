@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -39,6 +40,32 @@ public class SleepActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
 
 
+
+
+        // Przycisk "bieg"
+        Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Tworzenie i uruchomienie Intent z informacją o rodzaju aktywności
+                Intent intent = new Intent(SleepActivity.this, TipsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+        Button button1 = findViewById(R.id.button1);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSleepChronotypeActivity();
+            }
+        });
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,4 +96,12 @@ public class SleepActivity extends AppCompatActivity {
 
 
     }
+
+
+    private void openSleepChronotypeActivity() {
+        Intent intent = new Intent(this, sleep_chronotype.class);
+        startActivity(intent);
+    }
+
+
 }

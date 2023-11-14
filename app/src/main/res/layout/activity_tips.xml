@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sleep_background"
+    tools:context=".TipsActivity">
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_arrow"
+        android:layout_marginTop="45dp"
+        android:id="@+id/back_button"
+        android:layout_marginStart="30dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="40sp"
+        android:id="@+id/text_tips"
+        android:fontFamily="@font/alkatr"
+        android:text="Feel tired after waking up?\n Here are tips that will change that:">
+
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120sp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Upgrade Bedding\n
+Invest in a supportive mattress and comfy bedding.\n\n
+
+2. Darken the Room\n
+Block out excess light with curtains or a sleep mask.\n\n
+
+3.Reduce Noise\n
+Keep noise to a minimum, use earplugs if needed.\n\n
+
+4.Optimize Bedroom Temperature\n
+Set the thermostat to 65-68°F for a comfortable sleep.\n\n
+
+5. Prioritize Seven Hours of Sleep\n
+Plan for at least seven hours of nightly sleep.\n\n
+
+6. Stick to a Consistent Wake-Up Time\n
+Set a daily alarm for a steady wake-up routine.\n\n
+
+7. Limit Naps to 20 Minutes\n
+Keep short, early afternoon naps.\n\n
+
+8. Relax Before Bed\n
+Engage in calming activities 30 minutes before sleep.\n\n
+
+9. Disconnect from Devices\n
+Avoid electronics an hour before bedtime.\n\n
+
+10. Get Natural Light Exposure\n
+Spend 30 minutes outdoors or open windows for light.\n\n
+
+11. Exercise Daily for 20 Minutes\n
+Incorporate daily, non-intense exercise.\n\n
+
+12. Restrict Caffeine After 2 p.m.\n
+Limit caffeine intake after 2 p.m.\n\n
+
+13. Be Mindful of Alcohol\n
+Avoid alcohol before bedtime.\n\n
+
+14. Eat Dinner Early\n
+Finish dinner a few hours before bed.\n\n
+
+15. Limit Nicotine and Smoke Exposure\n
+Minimize nicotine use and exposure to smoke.\n\n
+
+16. Reserve Bed for Sleep Only\n
+Associate bed with sleep and intimacy.\n\n
+
+17. Leave Bed After 20 Minutes\n
+Avoid frustration by getting up after 20 minutes.\n\n
+
+18. Maintain a Sleep Diary\n
+Track sleep patterns and influencing factors.\n\n
+
+19. Consider Sleep Supplements\n
+Consult a doctor for melatonin or other supplements.\n\n
+
+20. Consult a Doctor\n
+Seek professional advice for persistent sleep issues.\n\n\n\n"
+        android:layout_below="@id/text_tips"
+        android:layout_marginTop="30sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:id="@+id/text_tips_advice"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        tools:ignore="HardcodedText">
+
+    </TextView>
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/grey_300"
+        android:background="@color/gray"
+        app:itemIconSize="40sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_above="@id/bottom_navigation"/>
+
+</RelativeLayout>

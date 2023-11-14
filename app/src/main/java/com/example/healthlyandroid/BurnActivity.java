@@ -10,6 +10,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,6 +24,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.Objects;
 
 public class BurnActivity extends AppCompatActivity {
 
@@ -43,6 +46,22 @@ public class BurnActivity extends AppCompatActivity {
 
         editTimeRoute = findViewById(R.id.edit_time_route);
         caloriesBurnedTextView = findViewById(R.id.calories_burned);
+
+
+        // Ustaw pasek stanu na transparentny
+        setStatusBarTransparent();
+    }
+
+    private void setStatusBarTransparent() {
+        Window window = getWindow();
+        if (window != null) {
+            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            window.setStatusBarColor(android.graphics.Color.TRANSPARENT);
+        }
+
+
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
 
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(new View.OnClickListener() {

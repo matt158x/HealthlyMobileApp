@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/sleep_background"
+    android:layout_height="match_parent"
+    tools:context=".sleep_chronotype">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_arrow"
+        android:layout_marginTop="55dp"
+        android:id="@+id/back_button"
+        android:layout_marginStart="30dp"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Complete the form"
+        android:layout_marginTop="50sp"
+        android:textSize="22sp"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:id="@+id/quiz_text">
+        </TextView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What time do you get up without an alarm ?"
+        android:textColor="@color/white"
+        android:layout_below="@id/quiz_text"
+        android:id="@+id/text1"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:gravity="center">
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button1_1"
+        android:layout_below="@id/text1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:tag="0"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Early in the morning, around 6 or 7">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button1_1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:tag="1"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Between 7 and 9">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1_3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button1_2"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:tag="2"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="After 10 or later">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button1_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button1_3"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:tag="3"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="It's hard to tell, my sleep is irregular">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button1_4"
+        android:id="@+id/text2"
+        android:textColor="@color/white"
+        android:text="What do you usually do on weekends?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button2_1"
+        android:layout_below="@id/text2"
+        android:tag="4"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="I'm cleaning, organizing, preparing for next week">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:tag="5"
+        android:layout_below="@id/button2_1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="I meet friends and spend time outdoors">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2_3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button2_2"
+        android:tag="6"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="I've been sleeping all week !">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button2_3"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:tag="7"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="I'm resting at home">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2_4"
+        android:id="@+id/text3"
+        android:textColor="@color/white"
+        android:text="How often do you take a nap ?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button3_1"
+        android:layout_below="@id/text3"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:tag="8"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Almost never">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button3_1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:tag="9"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Rather rarely">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3_3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button3_2"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:tag="10"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Even often">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button3_3"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:tag="11"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="Very often">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button3_4"
+        android:id="@+id/text4"
+        android:textColor="@color/white"
+        android:text="What time of the day does your mind work best ?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button4_1"
+        android:layout_below="@id/text4"
+        android:tag="12"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="In the morning">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button4_1"
+        android:tag="13"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Around midday">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4_3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button4_2"
+        android:tag="14"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="In the evening or at night">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button4_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button4_3"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:tag="15"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="In the afternoon">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button4_4"
+        android:id="@+id/text5"
+        android:textColor="@color/white"
+        android:text="What do you think about parties ?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button5_1"
+        android:tag="16"
+        android:layout_below="@id/text5"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="They're okay, but they often make me tired">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button5_1"
+        android:tag="17"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="I love them! I am the real life of the party">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5_3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button5_2"
+        android:tag="18"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="It's not my cup of tea">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button5_3"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:tag="19"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="I hate parties !">
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button5_4"
+        android:id="@+id/text6"
+        android:textColor="@color/white"
+        android:text="What time do you usually go to bed ?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button6_1"
+        android:tag="20"
+        android:layout_below="@id/text6"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="As soon as I can !">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:tag="21"
+        android:layout_below="@id/button6_1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Between 10pm 11pm">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6_3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button6_2"
+        android:tag="22"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Very late, well after midnight">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:tag="23"
+        android:layout_below="@id/button6_3"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="Around midnight">
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button6_4"
+        android:id="@+id/text7"
+        android:textColor="@color/white"
+        android:text="Do you feel rested in the morning ?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button7_1"
+        android:tag="24"
+        android:layout_below="@id/text7"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Not really, it varies">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button7_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:tag="25"
+        android:layout_below="@id/button7_1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="I always want sleeping longer">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button7_3"
+        android:layout_width="match_parent"
+        android:tag="26"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button7_2"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Its hard to get out of bed in the morning">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button7_4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button7_3"
+        android:tag="27"
+        android:background="@drawable/rounded_grey_button"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:text="Yes, but I need a moment to wake up">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button7_4"
+        android:id="@+id/text8"
+        android:textColor="@color/white"
+        android:text="Do you think you are an early bird or a night owl ?"
+        android:fontFamily="@font/alkatr"
+        android:gravity="center"
+        android:layout_marginTop="50sp"
+        android:textSize="18sp">
+
+    </TextView>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/button8_1"
+        android:tag="28"
+        android:layout_below="@id/text8"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Night owl !">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button8_2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:tag="29"
+        android:layout_gravity="center"
+        android:layout_below="@id/button8_1"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="Early bird !">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_enter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/button8_2"
+        android:background="@drawable/rounded_green_button"
+        android:layout_marginTop="70dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:text="See results">
+
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+<Space
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/space"
+    android:layout_below="@id/button_enter">
+
+</Space>
+
+
+
+
+
+</RelativeLayout>
+
+
+</ScrollView>
+
+
+
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+    </Space>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/grey_300"
+        android:background="@color/gray"
+        app:itemIconSize="40sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_above="@id/bottom_navigation"/>
+
+
+
+</RelativeLayout>

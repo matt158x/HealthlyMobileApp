@@ -8,13 +8,15 @@
     android:background="#181414">
 
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/back_arrow"
-        android:layout_marginTop="45dp"
-        android:id="@+id/back_button"
-        android:layout_marginStart="30dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
     <ImageView
@@ -24,12 +26,22 @@
         android:id="@+id/full_image">
     </ImageView>
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_arrow"
+            android:layout_marginTop="45dp"
+            android:id="@+id/back_button"
+            android:layout_marginStart="30dp"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="60sp"
         android:layout_below="@id/full_image"
         android:background="@color/gray"
         android:id="@+id/linear1">
+
 
     <TextView
         android:layout_width="match_parent"
@@ -39,13 +51,16 @@
         android:gravity="center"
         android:text="Nazwa posiłku dla obrazka"
         android:textColor="@color/white"
-        android:textSize="22sp"
+        android:textSize="26sp"
         android:layout_marginTop="10sp"
         android:layout_marginStart="10sp"
         android:fontFamily="@font/alkatr">
     </TextView>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -209,15 +224,18 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="42sp"
         android:layout_below="@+id/linear3"
         android:layout_marginTop="30sp"
-        android:text="Recipe"
+        android:text="Ingredients:"
         android:gravity="center"
         android:textColor="@color/white"
         android:fontFamily="@font/alkatr"
-        android:textSize="24sp"
-        android:id="@+id/recipe">
+        android:textSize="26sp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        android:id="@+id/ingredients">
 
     </TextView>
 
@@ -225,18 +243,91 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Recepta na to jest taka ze xd "
-        android:layout_below="@id/recipe"
+        android:text="Lista składników"
+        android:layout_below="@id/ingredients"
         android:textColor="@color/white"
         android:fontFamily="@font/alkatr"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="10dp"
+        android:textSize="18sp"
+        android:layout_marginTop="20sp"
+        android:id="@+id/ingredients_list">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="42sp"
+        android:layout_below="@id/ingredients_list"
+        android:id="@+id/recipe"
+        android:text="Recipe"
+        android:textColor="@color/white"
         android:gravity="center"
-        android:id="@+id/recipe_text">
+        android:textSize="26sp"
+        android:background="@drawable/rounded_grey_home_button"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        android:fontFamily="@font/alkatr"
+        android:layout_marginTop="30sp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receptura"
+        android:layout_below="@id/recipe"
+        android:id="@+id/recipe_text"
+        android:fontFamily="@font/alkatr"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="20sp">
 
     </TextView>
 
 
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recipe_text"
+            android:background="@drawable/rounded_green_button"
+            android:layout_marginStart="100sp"
+            android:layout_marginEnd="100sp"
+            android:text="Add to Database"
+            android:fontFamily="@font/alkatr"
+            android:textSize="16sp"
+            android:id="@+id/add_meal"
+            android:layout_marginTop="20sp">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/add_meal"/>
+
+
+    </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/grey_300"
+        android:background="@color/gray"
+        app:itemIconSize="40sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        android:layout_above="@id/bottom_navigation"/>
 
 
 </RelativeLayout>

@@ -1,22 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#181414"
-    tools:context=".SleepActivity">
+    android:background="@drawable/sleep_background"
+    tools:context=".SleepActivity"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:layout_margin="0dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sleep"
-        android:textColor="@color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="32sp">
 
-    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose what interests you"
+                android:textColor="@color/white"
+                android:layout_marginStart="50dp"
+                android:textSize="28sp"
+                android:id="@+id/breakfast"
+                android:layout_marginTop="60sp"
+                android:fontFamily="@font/alkatr">
+
+            </TextView>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/button1"
+                android:background="@drawable/rounded_transparent_button"
+                android:layout_marginTop="200dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/alkatr"
+                android:layout_marginStart="50dp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="50dp"
+                android:textSize="22sp"
+                android:text="Know your sleep chronotype">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_below="@id/button1"
+                android:background="@drawable/rounded_transparent_button"
+                android:layout_marginTop="20dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/alkatr"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:textSize="22sp"
+                android:text="Sleep tips"
+                android:textColor="@color/white">
+
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -35,4 +99,11 @@
         android:background="@color/black"
         android:layout_above="@id/bottom_navigation"/>
 
-</RelativeLayout>
+
+
+
+
+
+
+
+</LinearLayout>
