@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         if (user != null) {
                             String userId = user.getUid();
-                            databaseReference.child("users").child(userId).child("goal").addListenerForSingleValueEvent(new ValueEventListener() {
+                            databaseReference.child("users").child(userId).child("goalCalorie").addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     if (snapshot.exists()) {
