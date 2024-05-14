@@ -37,3 +37,8 @@ Android SDK, Java, JavaScript, Firebase, XML, Gradle
 <img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/aed325a9-549e-41eb-ab03-4d13ee081746" width="250" height="500">
 <img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/5f3c3da0-de54-4823-b9d4-4624041b2c8a" width="250" height="500">
 <img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/d54421cb-2ca9-41c8-8de6-835bdd9b9c2b" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/cf5c0ed9-9da8-43a0-b353-b962add8ba7c" width="250" height="500">
+
+Updated HomePage:
+
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/bcf95118-acfd-4894-ab7f-76c5d335f232" width="250" height="500">
