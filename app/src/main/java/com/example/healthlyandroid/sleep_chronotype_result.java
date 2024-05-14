@@ -62,7 +62,6 @@ public class sleep_chronotype_result extends AppCompatActivity {
         exitImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie intentu do otwarcia aktywności SleepActivity
                 Intent intent = new Intent(getApplicationContext(), SleepActivity.class);
                 startActivity(intent);
             }
@@ -71,13 +70,10 @@ public class sleep_chronotype_result extends AppCompatActivity {
 
 
 
-        // Odbierz wynik z intentu
         String chronotypeResult = getIntent().getStringExtra("chronotypeResult");
 
-        // Znajdź ImageView w nowej aktywności
         ImageView chronotypeImageView = findViewById(R.id.chronotype_image);
 
-        // Ustaw tło ImageView na podstawie chronotypeResult
         int imageResource;
         switch (chronotypeResult) {
             case "Wolf":
@@ -117,26 +113,20 @@ public class sleep_chronotype_result extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        // Odbierz wynik z intentu
         String chronotypeResult = getIntent().getStringExtra("chronotypeResult");
 
-        // Znajdź TextView w nowej aktywności
         TextView resultTextView = findViewById(R.id.result);
 
-        // Ustaw wynik na TextView
         resultTextView.setText("You are " + chronotypeResult + " !");
     }
 
 
 
     private void displayChronotypeText() {
-        // Odbierz wynik z intentu
         String chronotypeResult = getIntent().getStringExtra("chronotypeResult");
 
-        // Znajdź TextView w nowej aktywności
         TextView chronotypeTextView = findViewById(R.id.chronotype_text);
 
-        // Ustaw odpowiedni tekst na podstawie chronotypeResult
         String textToDisplay = "";
 
         switch (chronotypeResult) {

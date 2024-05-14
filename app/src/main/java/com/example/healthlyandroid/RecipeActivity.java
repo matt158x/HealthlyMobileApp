@@ -58,19 +58,15 @@ public class RecipeActivity extends AppCompatActivity {
         addMealButton = findViewById(R.id.add_meal);
 
 
-        // Odbieranie informacji z poprzedniej aktywności
         int imageId = getIntent().getIntExtra("imageId", R.drawable.full_pancakes);
 
 
 
-        // Ustawianie obrazka w ImageView
         fullImage.setImageResource(imageId);
 
 
-        // Odbieranie przekazanego tekstu z poprzedniej aktywności
         String mealName = getIntent().getStringExtra("mealName");
 
-        // Ustawianie tekstu w TextView
         mealNameTextView.setText(mealName);
 
         String calories = getIntent().getStringExtra("calories");
@@ -92,12 +88,10 @@ public class RecipeActivity extends AppCompatActivity {
         recipeTextView.setText(recipe);
 
 
-        // Inicjalizacja Firebase Authentication
         FirebaseAuth auth = FirebaseAuth.getInstance();
         String userUid = auth.getCurrentUser().getUid(); // Pobieranie UID zalogowanego użytkownika
 
 
-        // Inicjalizacja bazy danych Firebase
         databaseReference = FirebaseDatabase.getInstance().getReference().child("users").child(userUid).child("ingredients"); // Użyj UID jako klucza użytkownika.child("ingredients");
 
 
@@ -111,11 +105,9 @@ public class RecipeActivity extends AppCompatActivity {
 
 
 
-        // Obsługa kliknięcia przycisku "add_meal"
         addMealButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Pobieranie wartości z TextView
                 int calories = Integer.parseInt(caloriesTextView.getText().toString());
                 int carbs = Integer.parseInt(carbsTextView.getText().toString());
                 int fat = Integer.parseInt(fatTextView.getText().toString());
@@ -123,28 +115,17 @@ public class RecipeActivity extends AppCompatActivity {
 
 
 
-                // Tworzenie obiektu do zapisu w bazie danych
-                // Tutaj zapisujemy wartości bez tworzenia oddzielnej klasy
                 databaseReference.child(mealName).child("calories").setValue(calories);
                 databaseReference.child(mealName).child("carbs").setValue(carbs);
                 databaseReference.child(mealName).child("fat").setValue(fat);
                 databaseReference.child(mealName).child("protein").setValue(proteins);
-                // Dodaj powiadomienie Toast
                 Toast.makeText(RecipeActivity.this, "Meal added to database", Toast.LENGTH_SHORT).show();
 
-                // Otwórz DietActivity
                 Intent intent = new Intent(RecipeActivity.this, DietActivity.class);
                 startActivity(intent);
             }
         });
 
-
-
-
-
-
-
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -194,6 +175,6 @@ public class RecipeActivity extends AppCompatActivity {
 
 
     private void navigateBackToDietActivity() {
-        onBackPressed(); // Ta metoda powinna zautomatyzować proces powrotu do poprzedniej aktywności
+        onBackPressed();
     }
 }

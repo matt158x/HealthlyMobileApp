@@ -31,12 +31,10 @@ public class WorkoutActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Obsługa kliknięcia przycisku cofania
                 onBackPressed();
             }
         });
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -86,55 +84,46 @@ public class WorkoutActivity extends AppCompatActivity {
         biegButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie i uruchomienie Intent z informacją o rodzaju aktywności
                 Intent intent = new Intent(WorkoutActivity.this, BurnActivity.class);
                 intent.putExtra("activityType", "bieg");
                 startActivity(intent);
             }
         });
 
-        // Przycisk "rolki"
         Button rolkiButton = findViewById(R.id.Rolki);
         rolkiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie i uruchomienie Intent z informacją o rodzaju aktywności
                 Intent intent = new Intent(WorkoutActivity.this, BurnActivity.class);
                 intent.putExtra("activityType", "rolki");
                 startActivity(intent);
             }
         });
 
-        // Przycisk "pływanie"
         Button swimButton = findViewById(R.id.Swim);
         swimButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie i uruchomienie Intent z informacją o rodzaju aktywności
                 Intent intent = new Intent(WorkoutActivity.this, BurnActivity.class);
                 intent.putExtra("activityType", "swim");
                 startActivity(intent);
             }
         });
 
-        // Przycisk "rower"
         Button rowerButton = findViewById(R.id.Rower);
         rowerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie i uruchomienie Intent z informacją o rodzaju aktywności
                 Intent intent = new Intent(WorkoutActivity.this, BurnActivity.class);
                 intent.putExtra("activityType", "rower");
                 startActivity(intent);
             }
         });
 
-        // Przycisk "silownia"
         Button workoutButton = findViewById(R.id.workout);
         workoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie i uruchomienie Intent z informacją o rodzaju aktywności
                 Intent intent = new Intent(WorkoutActivity.this, BurnActivity.class);
                 intent.putExtra("activityType", "workout");
                 startActivity(intent);
@@ -146,10 +135,8 @@ public class WorkoutActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        // Możesz dodać dodatkową logikę lub wrócić do poprzedniej aktywności
-        // Jeśli chcesz wrócić do poprzedniej aktywności, użyj Intent
         Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
-        finish(); // Opcjonalnie możesz wywołać finish(), aby zamknąć obecną aktywność
+        finish();
     }
 }

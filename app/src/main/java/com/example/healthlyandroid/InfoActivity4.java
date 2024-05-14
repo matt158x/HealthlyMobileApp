@@ -37,7 +37,6 @@ public class InfoActivity4 extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -55,13 +54,11 @@ public class InfoActivity4 extends AppCompatActivity {
         weightPicker1 = findViewById(R.id.weightPicker1);
         nextButton = findViewById(R.id.next_button3);
 
-        // Ustawienie zakresów dla NumberPicker
         heightPicker1.setMinValue(100);
         heightPicker1.setMaxValue(200);
         weightPicker1.setMinValue(50);
         weightPicker1.setMaxValue(150);
 
-        // Ustawienie wartości domyślnych dla NumberPicker
         heightPicker1.setValue(170);
         weightPicker1.setValue(70);
 
@@ -79,7 +76,6 @@ public class InfoActivity4 extends AppCompatActivity {
         int height = heightPicker1.getValue();
         int weight = weightPicker1.getValue();
 
-        // Zapisywanie danych do bazy danych
         mDatabase.child("users").child(userId).child("height").setValue(height);
         mDatabase.child("users").child(userId).child("weight").setValue(weight);
     }
@@ -109,7 +105,6 @@ public class InfoActivity4 extends AppCompatActivity {
                         double averageMultiplier = 1.5; // Ustalony stały współczynnik dla każdego użytkownika uśredniając aktywnośc fizyczną"
                         double goalCalories = bmr * averageMultiplier; // Przeliczenie zapotrzebowania kalorycznego do utrzymania wagi
 
-                        // Zapisanie wartości goalCalories w bazie danych
                         userReference.child("goalCalorie").setValue((int) goalCalories);
 
                         openHomeActivity();

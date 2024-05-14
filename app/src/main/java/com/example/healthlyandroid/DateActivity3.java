@@ -38,7 +38,7 @@ public class DateActivity3 extends AppCompatActivity {
         databaseReference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Ustaw pasek stanu na transparentny
+
         setStatusBarTransparent();
     }
 
@@ -52,12 +52,12 @@ public class DateActivity3 extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        // Ustawienie wartości domyślnej dla DatePicker na 01.01.2000
+
         int defaultYear = 2000;
-        int defaultMonth = 0; // styczeń (numeracja miesięcy zaczyna się od zera)
+        int defaultMonth = 0;
         int defaultDay = 1;
 
-        // Ustawienie wartości domyślnej dla DatePicker
+
         datePicker.init(defaultYear, defaultMonth, defaultDay, null);
 
         nextButton.setOnClickListener(new View.OnClickListener() {

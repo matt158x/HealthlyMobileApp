@@ -33,7 +33,7 @@ public class GenderActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_gender2);
 
 
-        // Ustaw pasek stanu na transparentny
+
         setStatusBarTransparent();
     }
 
@@ -87,7 +87,6 @@ public class GenderActivity2 extends AppCompatActivity {
         maleButton.setSelected(false);
         femaleButton.setSelected(false);
         button.setSelected(true);
-        // Zmień kolor tła przycisku na zielony dla wybranego przycisku
         int greenColor = getResources().getColor(R.color.green); // Kolor zasobu z pliku colors.xml
         int grayColor = getResources().getColor(R.color.gray); // Kolor zasobu z pliku colors.xml
         maleButton.setBackgroundColor(button == maleButton ? greenColor : grayColor);

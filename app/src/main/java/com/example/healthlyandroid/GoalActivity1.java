@@ -35,7 +35,6 @@ public class GoalActivity1 extends AppCompatActivity {
         setContentView(R.layout.activity_goal1);
 
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -56,7 +55,6 @@ public class GoalActivity1 extends AppCompatActivity {
         nextButton = findViewById(R.id.next_button);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        // Initialize Firebase database reference
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
@@ -100,7 +98,6 @@ public class GoalActivity1 extends AppCompatActivity {
         maintainWeightButton.setSelected(false);
         button.setSelected(true);
 
-        // Zmień kolor tła przycisku na zielony dla wybranego przycisku
         int greenColor = getResources().getColor(R.color.green); // Kolor zasobu z pliku colors.xml
         int grayColor = getResources().getColor(R.color.gray); // Kolor zasobu z pliku colors.xml
         loseWeightButton.setBackgroundColor(button == loseWeightButton ? greenColor : grayColor);
@@ -119,7 +116,6 @@ public class GoalActivity1 extends AppCompatActivity {
     }
 
     private void saveSelectedGoal(String selectedGoal) {
-        // Save the selected goal to Firebase Realtime Database
 
         FirebaseUser currentUser = firebaseAuth.getCurrentUser();
         if (currentUser != null) {

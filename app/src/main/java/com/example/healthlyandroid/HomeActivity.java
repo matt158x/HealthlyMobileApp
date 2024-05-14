@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -16,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -56,6 +59,7 @@ public class HomeActivity extends AppCompatActivity {
     private TextView waterCountTextView;
     private TextView leftTextView;
     private TextView rightTextView;
+    private ProgressBar progressBar;
 
     private BottomNavigationView bottomNavigationView;
 
@@ -65,13 +69,18 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        // Inicjalizacja komponentów interfejsu
+
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // Ustaw pasek stanu na transparentny
+
         setStatusBarTransparent();
+
+
+
+        progressBar = findViewById(R.id.progress_bar);
+
     }
 
     private void setStatusBarTransparent() {
@@ -119,7 +128,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        // Wywołaj funkcję retrieveUserDataFromFirebase() po zalogowaniu użytkownika
+
         if (mAuth.getCurrentUser() != null) {
             retrieveUserDataFromFirebase();
         }
@@ -190,10 +199,10 @@ public class HomeActivity extends AppCompatActivity {
                 fatTextView.setText(String.valueOf(fatValue));
                 caloriesTextView.setText(String.valueOf(caloriesValue));
 
-                // Aktualizacja pozostałych kalorii
                 updateRemainingCalories();
 
-                // Zapisanie wartości w bazie danych
+                updateProgressBar(caloriesValue, goalCalories);
+
                 saveUserDataToFirebase(proteinsValue, carbsValue, fatValue, caloriesValue);
             }
         }
@@ -202,12 +211,12 @@ public class HomeActivity extends AppCompatActivity {
     private void updateRemainingCalories() {
         String leftCaloriesText = leftTextView.getText().toString();
 
-        // Zamień przecinek na kropkę i uwzględnij poprawne Locale
+
         double leftCalories = Double.parseDouble(leftCaloriesText.replace(",", "."));
 
         int remainingCalories = (int) (goalCalories - leftCalories);
 
-        // Ustaw minimalną wartość 0, jeśli wartość wynikowa jest mniejsza
+
         if (remainingCalories < 0) {
             remainingCalories = 0;
         }
@@ -223,12 +232,24 @@ public class HomeActivity extends AppCompatActivity {
         double newWaterIntake = currentWaterIntake + amount;
         waterCountTextView.setText(String.format("%.1f L", newWaterIntake));
 
-        // Zapisz nową wartość do bazy danych
+
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
             String userId = currentUser.getUid();
             DatabaseReference userRef = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
             userRef.child("water_intake").setValue(newWaterIntake);
+        }
+    }
+
+    private void updateProgressBar(int caloriesEaten, int goalCalories) {
+        if (goalCalories > 0) {
+            double progress = ((double) caloriesEaten / goalCalories) * 100; // Oblicz postęp w procentach
+            progressBar.setProgress((int) progress); // Ustaw wartość postępu ProgressBar
+        }
+        if (progressBar.getProgress() <= 50) {
+            progressBar.getProgressDrawable().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+        } else {
+            progressBar.getProgressDrawable().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN);
         }
     }
 
@@ -244,12 +265,14 @@ public class HomeActivity extends AppCompatActivity {
                     goalCalories = snapshot.child("goalCalorie").getValue(Integer.class);
                     goalCalorieText.setText(String.valueOf(goalCalories));
                     updateRemainingCalories();
+                    // Dodaj aktualizację ProgressBar
+                    updateProgressBar(caloriesValue, goalCalories);
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Obsługa błędu odczytu z bazy danych
+
             }
         });
     }
@@ -270,9 +293,7 @@ public class HomeActivity extends AppCompatActivity {
                     Double caloriesBurned = snapshot.child("caloriesBurned").getValue(Double.class); // Pobierz wartość jako Double
                     int caloriesBurnedInt = caloriesBurned != null ? caloriesBurned.intValue() : 0; // Konwertuj na int lub 0, jeśli jest null
 
-                    // Sprawdź, czy dane nie są null przed odwołaniem się do intValue()
                     if (caloriesEaten != null && carbsEaten != null && proteinsEaten != null && fatEaten != null && waterIntake != null) {
-                        // Aktualizacja interfejsu z nowymi danymi
                         TextView proteinsTextView = findViewById(R.id.proteins_text_view);
                         TextView carbsTextView = findViewById(R.id.carbs_text_view);
                         TextView fatTextView = findViewById(R.id.fat_text_view);
@@ -291,18 +312,17 @@ public class HomeActivity extends AppCompatActivity {
                         caloriesTextView.setText(String.valueOf(caloriesValue));
                         water_count.setText(String.valueOf(waterValue));
 
-                        // Aktualizacja pozostałych kalorii
                         updateRemainingCalories();
 
-                        // Ustawienie wartości caloriesBurned w rightTextView
-                        rightTextView.setText(String.valueOf(caloriesBurnedInt)); // Dodaj to
+
+                        rightTextView.setText(String.valueOf(caloriesBurnedInt));
                     }
                 }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                // Obsługa błędu odczytu z bazy danych
+
             }
         });
     }
@@ -311,14 +331,14 @@ public class HomeActivity extends AppCompatActivity {
         String userId = mAuth.getCurrentUser().getUid();
         DatabaseReference userReference = mDatabase.child("users").child(userId);
 
-        // Utworzenie obiektu do zapisu
+
         Map<String, Object> userUpdates = new HashMap<>();
         userUpdates.put("calories_eaten", calories);
         userUpdates.put("carbs_eaten", carbs);
         userUpdates.put("proteins_eaten", proteins);
         userUpdates.put("fat_eaten", fat);
 
-        // Aktualizacja danych w bazie
+
         userReference.updateChildren(userUpdates)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override

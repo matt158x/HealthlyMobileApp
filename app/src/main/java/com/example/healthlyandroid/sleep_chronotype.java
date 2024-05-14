@@ -60,8 +60,6 @@ public class sleep_chronotype extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-
-        // Inicjalizacja przycisków
         Button button1_1 = findViewById(R.id.button1_1);
         Button button1_2 = findViewById(R.id.button1_2);
         Button button1_3 = findViewById(R.id.button1_3);
@@ -102,8 +100,6 @@ public class sleep_chronotype extends AppCompatActivity {
 
         Button buttonEnter = findViewById(R.id.button_enter);
 
-
-        // Ustaw nasłuchiwaczy na przyciski
         setButtonClickListeners(button1_1);
         setButtonClickListeners(button1_2);
         setButtonClickListeners(button1_3);
@@ -190,13 +186,10 @@ public class sleep_chronotype extends AppCompatActivity {
     }
 
     private void handleButtonClick(Button button) {
-        // Przycisk został kliknięty, zmień jego kolor na zielony
         button.setBackgroundColor(getResources().getColor(R.color.green));
 
 
-        // Pobierz indeks przycisku i zaktualizuj wynik
         int buttonIndex = Integer.parseInt(button.getTag().toString());
-        // Uaktualnij wynik na podstawie przycisku
         switch (buttonIndex % 4) {
             case 0:
                 scoreLion++;
@@ -214,7 +207,6 @@ public class sleep_chronotype extends AppCompatActivity {
     }
 
     private void displayChronotype() {
-        // Określenie chronotypu na podstawie wyników
         String chronotype;
         if (scoreLion > scoreBear && scoreLion > scoreWolf && scoreLion > scoreDolphin) {
             chronotype = "Lion";
@@ -226,11 +218,9 @@ public class sleep_chronotype extends AppCompatActivity {
             chronotype = "Dolphin";
         }
 
-        // Tworzenie intentu
         Intent intent = new Intent(this, sleep_chronotype_result.class);
         intent.putExtra("chronotypeResult", chronotype);
 
-        // Uruchamianie nowej aktywności
         startActivity(intent);
     }
 

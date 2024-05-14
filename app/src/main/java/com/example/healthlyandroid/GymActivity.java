@@ -19,8 +19,8 @@ import java.util.Objects;
 public class GymActivity extends AppCompatActivity {
 
 
-    private int selectedChoice1 = -1; // Wybór z fragmentu 1
-    private int selectedChoice2 = -1; // Wybór z fragmentu 2
+    private int selectedChoice1 = -1;
+    private int selectedChoice2 = -1;
 
     private BottomNavigationView bottomNavigationView;
 
@@ -30,7 +30,6 @@ public class GymActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gym);
 
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -76,11 +75,10 @@ public class GymActivity extends AppCompatActivity {
 
 
 
-        // Ustaw GymFragment1 jako początkowy fragment
         loadFragment(new GymFragment1());
     }
 
-    // Metoda do przełączania między fragmentami
+
     public void loadFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -88,25 +86,25 @@ public class GymActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    // Metoda do przełączania z GymFragment1 do GymFragment2
+
     public void switchToGymFragment2() {
         loadFragment(new GymFragment2());
     }
 
-    // Metoda do przełączania z GymFragment2 do GymFragment3
+
     public void switchToGymFragment3() {
         loadFragment(new GymFragment3());
     }
 
 
-    // Metoda do uzyskiwania tekstu na podstawie wyborów z fragmentów 1 i 2
+
     public String generateTextForGymFragment3() {
         String text = "";
 
-        // Generowanie tekstu w zależności od wyborów
+
         if (selectedChoice1 != -1 && selectedChoice2 != -1) {
             if (selectedChoice1 == 2 && selectedChoice2 == 4) {
-                // Jeśli selectedChoice1 to 2 i selectedChoice2 to 2, ustaw "drugi drugi wybór"
+
                 text = "1. Bench Press with Barbell:\n\n" +
                         "\t4 sets x 6-8 reps\n" +
                         "Begin with a warm-up using a light barbell, then gradually increase the weight.\n" +
@@ -132,7 +130,7 @@ public class GymActivity extends AppCompatActivity {
                         "Control the movement to isolate the chest.";
             } else {
                 if (selectedChoice1 == 1 && selectedChoice2 == 4) {
-                    // Inaczej, ustaw inny tekst zależnie od wyborów
+
                     text = "1. Bench Press with Barbell: \n\n" +
                             "\t3 sets x 10-12 reps\n" +
                             "Begin with a warm-up using a light barbell, then gradually increase the weight.\n" +
@@ -371,17 +369,17 @@ public class GymActivity extends AppCompatActivity {
     }
 
 
-    // Metoda do przejścia z GymFragment2 do kolejnego fragmentu lub wykonania innych działań
+
     public void switchToNextFragment() {
-        // Tutaj możesz przejść do kolejnego fragmentu lub wykonać inne działania
+
     }
 
-    // Metoda do ustawiania wyboru z fragmentu 1
+
     public void setSelectedChoice1(int choice) {
         selectedChoice1 = choice;
     }
 
-    // Metoda do ustawiania wyboru z fragmentu 2
+
     public void setSelectedChoice2(int choice) {
         selectedChoice2 = choice;
     }

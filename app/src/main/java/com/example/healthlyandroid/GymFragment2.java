@@ -22,11 +22,9 @@ public class GymFragment2 extends Fragment {
         buttonChoice4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice2(4);
 
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment3();
 
             }
@@ -35,11 +33,9 @@ public class GymFragment2 extends Fragment {
         buttonChoice5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice2(5);
 
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment3();
 
             }
@@ -48,11 +44,9 @@ public class GymFragment2 extends Fragment {
         buttonChoice6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice2(6);
 
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment3();
 
             }
@@ -61,11 +55,9 @@ public class GymFragment2 extends Fragment {
         buttonChoice7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice2(7);
 
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment3();
 
             }

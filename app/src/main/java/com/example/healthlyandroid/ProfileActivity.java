@@ -59,7 +59,6 @@ public class ProfileActivity extends AppCompatActivity {
         ageTextView = findViewById(R.id.user_age);
         loadUserData();
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 

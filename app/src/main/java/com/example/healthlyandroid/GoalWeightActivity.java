@@ -39,7 +39,6 @@ public class GoalWeightActivity extends AppCompatActivity {
         activityLevelPicker = findViewById(R.id.activity_level_picker);
         nextButton = findViewById(R.id.next_button4);
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -53,12 +52,10 @@ public class GoalWeightActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).hide();
 
-        // Ustawienie wartości dla NumberPicker
         goalWeightPicker.setMinValue(0);
         goalWeightPicker.setMaxValue(200);
         goalWeightPicker.setValue(70);
 
-        // Ustawienie wartości dla Activity Level NumberPicker
         activityLevelPicker.setMinValue(0);
         activityLevelPicker.setMaxValue(2);
         activityLevelPicker.setDisplayedValues(new String[]{"Low", "Medium", "High"});

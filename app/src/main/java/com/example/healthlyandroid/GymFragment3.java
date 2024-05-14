@@ -16,11 +16,9 @@ public class GymFragment3 extends Fragment {
 
             TextView textView = view.findViewById(R.id.gym_text_view);
 
-            // Pobierz tekst na podstawie wyborów z GymActivity
             GymActivity gymActivity = (GymActivity) requireActivity();
             String textForFragment3 = gymActivity.generateTextForGymFragment3();
 
-            // Ustaw tekst w TextView
             textView.setText(textForFragment3);
 
             return view;

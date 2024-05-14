@@ -43,7 +43,6 @@ public class RegisterActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -60,7 +59,7 @@ public class RegisterActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish(); // Zamyka bieżące Activity i wraca do poprzedniego
+                finish();
             }
         });
 
@@ -86,7 +85,6 @@ public class RegisterActivity extends AppCompatActivity {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
-                        // Rejestracja powiodła się, dodawanie informacji o użytkowniku do bazy danych
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         if (user != null) {
                             String userId = user.getUid();
@@ -96,7 +94,6 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, "Użytkownik został pomyślnie utworzony.", Toast.LENGTH_SHORT).show();
                         openGoalActivity1();
                     } else {
-                        // Rejestracja nie powiodła się
                         if (task.getException() instanceof FirebaseAuthUserCollisionException) {
                             Toast.makeText(RegisterActivity.this, "Konto o podanym adresie e-mail już istnieje.", Toast.LENGTH_SHORT).show();
                         } else {
@@ -107,9 +104,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void openGoalActivity1() {
-        // Otwieranie GoalActivity
-        // Upewnij się, że GoalActivity jest prawidłowo zdefiniowane jako aktywność docelowa w pliku manifestu Twojej aplikacji
-        // Możesz użyć następującego kodu do otwarcia StartActivity:
         Intent intent = new Intent(RegisterActivity.this, GoalActivity1.class);
         startActivity(intent);
         finish();

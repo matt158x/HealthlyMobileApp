@@ -51,7 +51,6 @@ public class LoginActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -69,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish(); // Zamyka bieżące Activity i wraca do poprzedniego
+                finish();
             }
         });
 
@@ -117,7 +116,6 @@ public class LoginActivity extends AppCompatActivity {
                             });
                         }
                     } else {
-                        // Logowanie nie powiodło się
                         if (task.getException() instanceof FirebaseAuthInvalidUserException) {
                             Toast.makeText(LoginActivity.this, "Nieprawidłowy adres e-mail.", Toast.LENGTH_SHORT).show();
                         } else if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {

@@ -35,13 +35,35 @@
 
 
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
         android:id="@+id/relative_calories"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp">
+        android:layout_centerHorizontal="true">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/circular_progress_drawable" />
+
+        <ProgressBar
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:id="@+id/ramka"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/ramka" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +72,7 @@
             android:text="0"
             android:fontFamily="@font/alkatr"
             android:textColor="@color/white"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:layout_marginStart="35dp"
             android:gravity="center"
             android:layout_alignParentStart="true"
@@ -74,7 +96,7 @@
             android:text="0"
             android:fontFamily="@font/alkatr"
             android:textColor="@color/white"
-            android:textSize="32sp"
+            android:textSize="28sp"
             android:layout_marginEnd="25dp"
             android:gravity="right"
             android:layout_alignParentEnd="true"
@@ -88,7 +110,7 @@
     android:layout_below="@+id/relative_calories"
     android:layout_centerHorizontal="true"
     android:id="@+id/relative_text_calories"
-    android:layout_marginTop="-30dp">
+    android:layout_marginTop="-110dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -113,7 +135,8 @@
         android:textSize="22dp"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -139,7 +162,7 @@
         android:background="@drawable/rounded_grey_home_button"
         android:layout_below="@id/relative_text_calories"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="100dp">
 
         <LinearLayout
             android:layout_width="0dp"

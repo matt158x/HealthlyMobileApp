@@ -26,10 +26,8 @@ public class GymFragment1 extends Fragment {
         buttonChoice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice1(1);
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment2();
 
             }
@@ -41,11 +39,9 @@ public class GymFragment1 extends Fragment {
         buttonChoice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice1(2);
 
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment2();
 
             }
@@ -55,11 +51,9 @@ public class GymFragment1 extends Fragment {
         buttonChoice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Zapisz wybór użytkownika w GymActivity
                 GymActivity gymActivity = (GymActivity) requireActivity();
                 gymActivity.setSelectedChoice1(3);
 
-                // Przełącz się na fragment GymFragment2
                 gymActivity.switchToGymFragment2();
 
             }

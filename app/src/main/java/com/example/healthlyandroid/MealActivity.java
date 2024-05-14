@@ -70,7 +70,6 @@ public class MealActivity extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
         }
 
@@ -238,7 +237,7 @@ public void onClick(View v) {
         }
         });
 
-        // Dodajemy nasłuchiwanie zmian w polu tekstowym "gramsEditText"
+
         gramsEditText.addTextChangedListener(new TextWatcher() {
 @Override
 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -246,14 +245,14 @@ public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
 @Override
 public void onTextChanged(CharSequence s, int start, int before, int count) {
-        // Aktualizujemy wartość gramsValue na podstawie tekstu w polu "gramsEditText"
+
         try {
         gramsValue = Integer.parseInt(s.toString());
         } catch (NumberFormatException e) {
-        // Błąd w przypadku nieprawidłowego formatu liczby
+
         gramsValue = 0;
         }
-        updateMacros(); // Wywołujemy aktualizację makroskładników po zmianie gramów
+        updateMacros();
         }
 
 @Override
@@ -305,7 +304,6 @@ public void onDataChange(DataSnapshot snapshot) {
         originalIngredientsList.add(ingredientName);
         }
 
-        // Retrieve user-specific ingredients under their node
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DatabaseReference userIngredientsReference = mDatabase.child("users").child(userId).child("ingredients");
 
@@ -319,7 +317,6 @@ public void onDataChange(DataSnapshot userSnapshot) {
         userIngredientsList.add(userIngredientName);
         }
 
-        // Combine original and user ingredients
         combinedIngredientsList.clear();
         combinedIngredientsList.addAll(originalIngredientsList);
         combinedIngredientsList.addAll(userIngredientsList);
@@ -344,7 +341,7 @@ public void onCancelled(DatabaseError error) {
 private void navigateBackToHomeActivity() {
         Intent intent = new Intent(MealActivity.this, HomeActivity.class);
         startActivity(intent);
-        finish(); // Zamknij obecną aktywność, aby wrócić do poprzedniej
+        finish();
         }
 
 private void showSelectedIngredient(String ingredient) {
@@ -352,13 +349,12 @@ private void showSelectedIngredient(String ingredient) {
 
         DatabaseReference ingredientReference;
 
-        // Sprawdź, czy to składnik użytkownika
         if (userIngredientsList.contains(ingredient)) {
-        // Składnik użytkownika
+
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         ingredientReference = mDatabase.child("users").child(userId).child("ingredients").child(ingredient);
         } else {
-        // Ogólny składnik
+
         ingredientReference = mDatabase.child("ingredients").child(ingredient);
         }
 
@@ -392,7 +388,6 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
         if (requestCode == MEALADD_REQUEST_CODE) {
         if (resultCode == RESULT_OK) {
-        // Tutaj możesz ponownie pobrać składniki po dodaniu z MealaddActivity
         retrieveIngredients();
         }
         }
@@ -403,9 +398,9 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 private Double getDoubleValue(DataSnapshot snapshot) {
         if (snapshot.exists()) {
         Double value = snapshot.getValue(Double.class);
-        return value != null ? value : 0.0; // Zwracamy 0.0 jako Double w przypadku braku wartości
+        return value != null ? value : 0.0;
         }
-        return 0.0; // Zwracamy 0.0 jako Double w przypadku braku wartości
+        return 0.0;
         }
 
 
@@ -414,9 +409,9 @@ private void filterIngredients(String searchText) {
         ArrayList<String> filteredList = new ArrayList<>();
 
         if (searchText.isEmpty()) {
-        filteredList.addAll(combinedIngredientsList); // Use the combined list
+        filteredList.addAll(combinedIngredientsList);
         } else {
-        for (String ingredient : combinedIngredientsList) { // Use the combined list
+        for (String ingredient : combinedIngredientsList) {
         if (ingredient.toLowerCase().contains(searchText.toLowerCase())) {
         filteredList.add(ingredient);
         }
@@ -429,4 +424,5 @@ private void filterIngredients(String searchText) {
         ingredientsList.addAll(filteredList);
         adapter.notifyDataSetChanged();
         }
-        }
+
+}

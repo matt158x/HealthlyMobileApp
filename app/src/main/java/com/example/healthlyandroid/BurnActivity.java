@@ -105,10 +105,10 @@ public class BurnActivity extends AppCompatActivity {
 
 
 
-        // Odbierz informację o rodzaju aktywności z Intent
+
         String activityType = getIntent().getStringExtra("activityType");
 
-        // Znajdź przyciski w widoku
+
         Button lowButton = findViewById(R.id.low);
         Button midButton = findViewById(R.id.mid);
         Button highButton = findViewById(R.id.high);
@@ -116,7 +116,7 @@ public class BurnActivity extends AppCompatActivity {
 
         String additionalButtonText = null;
 
-        // Ustaw odpowiednie teksty na przyciskach w zależności od rodzaju aktywności
+
         if ("bieg".equals(activityType)) {
             lowButton.setText("Walking");
             midButton.setText("Jogging");
@@ -141,14 +141,14 @@ public class BurnActivity extends AppCompatActivity {
         }
 
 
-        // Inicjalizacja referencji do bazy danych Firebase
+
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             String userId = currentUser.getUid();
             userDatabase = FirebaseDatabase.getInstance().getReference().child("users").child(userId);
 
-            // Pobierz wagę użytkownika z Firebase
+
             userDatabase.child("weight").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -159,7 +159,7 @@ public class BurnActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError databaseError) {
-                    // Obsłuż błąd pobierania danych z Firebase
+                    // błąd pobierania danych z Firebase
                 }
             });
         }
@@ -169,7 +169,7 @@ public class BurnActivity extends AppCompatActivity {
 
 
 
-        // Inicjalizacja wartości MET na podstawie rodzaju aktywności
+
         double lowMet, midMet, highMet;
         double additionalMet = 0.0;
 
@@ -177,40 +177,39 @@ public class BurnActivity extends AppCompatActivity {
             lowMet = 3.0;
             midMet = 8.0;
             highMet = 12.0;
-            additionalButton.setVisibility(View.GONE); // Ukryj dodatkowy przycisk
+            additionalButton.setVisibility(View.GONE);
         } else if ("rolki".equals(activityType)) {
             lowMet = 4.5;
             midMet = 7.0;
             highMet = 12.0;
-            additionalButton.setVisibility(View.GONE); // Ukryj dodatkowy przycisk
+            additionalButton.setVisibility(View.GONE);
         } else if ("swim".equals(activityType)) {
             lowMet = 4.5;
             midMet = 7.5;
             highMet = 3.0;
-            additionalButton.setVisibility(View.GONE); //Ukryj dodatkowy przycisk
+            additionalButton.setVisibility(View.GONE);
         } else if ("workout".equals(activityType)) {
             lowMet = 3.0;
             midMet = 4.5;
             highMet = 6.5;
-            additionalButton.setVisibility(View.GONE); //Ukryj dodatkowy
+            additionalButton.setVisibility(View.GONE);
         } else if ("rower".equals(activityType)) {
             lowMet = 4.0;
             midMet = 6.0;
             highMet = 9.0;
             additionalMet = 13.0; // Dodatkowa wartość MET
-            additionalButton.setVisibility(View.VISIBLE); // Wyświetl dodatkowy przycisk
+            additionalButton.setVisibility(View.VISIBLE);
             additionalButtonText = "Mountain riding (MTB)";
         } else {
-            // Domyślne wartości MET, jeśli rodzaj aktywności nie jest rozpoznawany
             lowMet = 0.0;
             midMet = 0.0;
             highMet = 0.0;
             additionalMet = 0.0;
-            additionalButton.setVisibility(View.GONE); // Ukryj dodatkowy przycisk
+            additionalButton.setVisibility(View.GONE);
             additionalButtonText = "";
         }
 
-        // Ustaw odpowiednie wartości MET w zależności od rodzaju aktywności
+
         lowButton.setOnClickListener(view -> {
             metValue = lowMet;
             calculateCaloriesBurned();
@@ -226,7 +225,7 @@ public class BurnActivity extends AppCompatActivity {
              calculateCaloriesBurned();
         });
 
-        // Ustaw dodatkowy przycisk
+
         additionalButton.setText(additionalButtonText);
         double finalAdditionalMet = additionalMet;
         additionalButton.setOnClickListener(view -> {
@@ -234,7 +233,7 @@ public class BurnActivity extends AppCompatActivity {
             calculateCaloriesBurned();
         });
 
-        // Nasłuchuj zmian w polu czasu i oblicz kalorie po zmianach
+
         editTimeRoute.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -250,7 +249,7 @@ public class BurnActivity extends AppCompatActivity {
             }
         });
 
-        // Dodaj obsługę przycisku do dodawania kalorii
+
         addButton.setOnClickListener(view -> {
             addCaloriesBurnedToFirebase();
         });
@@ -258,11 +257,10 @@ public class BurnActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        // Możesz dodać dodatkową logikę lub wrócić do poprzedniej aktywności
-        // Jeśli chcesz wrócić do poprzedniej aktywności, użyj Intent
+
         Intent intent = new Intent(this, WorkoutActivity.class);
         startActivity(intent);
-        finish(); // Opcjonalnie możesz wywołać finish(), aby zamknąć obecną aktywność
+        finish();
     }
 
 
@@ -273,13 +271,13 @@ private void calculateCaloriesBurned() {
         try {
             double timeMinutes = Double.parseDouble(editTimeRoute.getText().toString());
 
-            // Przelicz czas na godziny
+
             double timeHours = timeMinutes / 60.0;
 
-            // Oblicz spalone kalorie na podstawie MET, czasu i wagi
+
             double caloriesBurned = metValue * weight * timeHours;
 
-            // Wyświetl wynik w TextView "calories_burned"
+
             caloriesBurnedTextView.setText(String.format("%.2f kcal", caloriesBurned));
         } catch (NumberFormatException e) {
             // Obsłuż błąd parsowania, np. gdy wartość czasu nie jest liczbą
@@ -291,13 +289,13 @@ private void calculateCaloriesBurned() {
         try {
             double timeMinutes = Double.parseDouble(editTimeRoute.getText().toString());
 
-            // Przelicz czas na godziny
+
             double timeHours = timeMinutes / 60.0;
 
-            // Oblicz spalone kalorie na podstawie MET, czasu i wagi
+
             double caloriesBurned = metValue * weight * timeHours;
 
-            // Dodaj spalone kalorie do Firebase
+
             userDatabase.child("caloriesBurned").addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -306,11 +304,11 @@ private void calculateCaloriesBurned() {
                         currentCaloriesBurned = dataSnapshot.getValue(Double.class);
                     }
 
-                    // Zaktualizuj wartość w Firebase dodając do siebie
+
                     double updatedCaloriesBurned = currentCaloriesBurned + caloriesBurned;
                     userDatabase.child("caloriesBurned").setValue(updatedCaloriesBurned);
 
-                    // Przejście do HomeActivity
+
                     Intent intent = new Intent(BurnActivity.this, HomeActivity.class);
                     startActivity(intent);
                 }
@@ -321,7 +319,7 @@ private void calculateCaloriesBurned() {
                 }
             });
         } catch (NumberFormatException e) {
-            // Obsłuż błąd parsowania, np. gdy wartość czasu nie jest liczbą
+            // Obsłuż błąd np. gdy wartość czasu nie jest liczbą
         }
     }
 }

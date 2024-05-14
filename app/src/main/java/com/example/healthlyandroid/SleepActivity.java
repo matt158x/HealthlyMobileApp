@@ -25,7 +25,6 @@ public class SleepActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sleep);
 
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -42,7 +41,6 @@ public class SleepActivity extends AppCompatActivity {
 
 
 
-        // Przycisk "bieg"
         Button button2 = findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -40,7 +40,7 @@ public class ProgressActivity extends AppCompatActivity {
     private int height;
     private int age;
     private String userId;
-    private String activityLevel; // Dodana deklaracja zmiennej activityLevel
+    private String activityLevel;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -49,7 +49,6 @@ public class ProgressActivity extends AppCompatActivity {
         setContentView(R.layout.activity_progress);
 
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
@@ -179,7 +178,6 @@ public class ProgressActivity extends AppCompatActivity {
 
         calorieTextView.setText(String.valueOf((int) goalCalories + " kcal"));
 
-        // Zapisanie wartości goalCalories w bazie danych
         DatabaseReference userReference = databaseReference.child("users").child(userId);
         userReference.child("goalCalorie").setValue((int) goalCalories);
 

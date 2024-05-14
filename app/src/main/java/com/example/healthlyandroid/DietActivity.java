@@ -50,7 +50,6 @@ public class DietActivity extends AppCompatActivity {
         imageView1_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_grannola); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Granola with Fruits");
@@ -86,7 +85,6 @@ public class DietActivity extends AppCompatActivity {
         imageView1_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_burrito); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Breakfast Burrito");
@@ -118,7 +116,7 @@ public class DietActivity extends AppCompatActivity {
         imageView1_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
+
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_smoothie); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Green Smoothie");
@@ -143,7 +141,7 @@ public class DietActivity extends AppCompatActivity {
         imageView2_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
+
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_kurczak); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Vietnamese Chicken");
@@ -175,7 +173,7 @@ public class DietActivity extends AppCompatActivity {
         imageView2_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
+
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_pasta); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Pasta with Vegetables");
@@ -214,7 +212,7 @@ public class DietActivity extends AppCompatActivity {
         imageView2_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
+
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_pancakes); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Pancakes with Fruits");
@@ -244,7 +242,7 @@ public class DietActivity extends AppCompatActivity {
         imageView3_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
+
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_airfryer); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Air-Fryer Sweet Potato");
@@ -276,7 +274,7 @@ public class DietActivity extends AppCompatActivity {
         imageView3_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
+
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_steakcajun); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Steak with Cajun & Potatoes");
@@ -309,7 +307,6 @@ public class DietActivity extends AppCompatActivity {
         imageView3_3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Tworzenie nowego intentu i przekazanie informacji do RecipeActivity
                 Intent intent = new Intent(DietActivity.this, RecipeActivity.class);
                 intent.putExtra("imageId", R.drawable.full_fishpie); // Przykładowa informacja do przekazania
                 intent.putExtra("mealName", "Cheesy Fish Pie");

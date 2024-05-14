@@ -21,7 +21,6 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        // Ustaw pasek stanu na transparentny
         setStatusBarTransparent();
     }
 
