@@ -1,4 +1,4 @@
-<b>Healthly is a mobile application designed to support a healthy lifestyle written in Java for Android phones.</b>
+#Healthly is a mobile application designed to support a healthy lifestyle written in Java for Android phones.
 
 The application uses a database to store userdata. Healthly contains functions such as counting calories and macro,
 counting calories burned, calculating BMI, healthy recipes, training plans.
@@ -9,32 +9,31 @@ Android SDK, Java, JavaScript, Firebase, XML, Gradle
 
 # App Screens
 
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/6a6900c5-e33b-4cff-bd68-e8e4c41b45f8" width="250" height="500" alt="1">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/02c9eea5-48f7-470d-9692-d221023c0f6b" width="250" height="500" alt="2">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/cf07b079-8cd7-4f81-8172-1664d8987807" width="250" height="500" alt="3">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/34ac2d3a-1526-4af4-a39f-a7ee96a469e7" width="250" height="500" alt="4">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/b603e8a8-6c72-4326-b137-ec1eb898e84c" width="250" height="500" alt="5">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/51089ff8-145c-445b-9a7b-35273b9f17ec" width="250" height="500" alt="6">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/ecb8e920-8ea6-4503-a52a-d22485fb1002" width="250" height="500" alt="7">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/955be7c1-9016-4034-b798-46be0d188304" width="250" height="500" alt="8">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/2972a0fb-3893-4c98-adb9-32eaa17933d6" width="250" height="500" alt="9">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/a2cd420c-30ab-4e0a-b817-dcbfcdfc6d24" width="250" height="500" alt="10 1">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/27aa9151-adee-4ef9-9403-e5ff6594f32e" width="250" height="500" alt="11">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/09acf6b4-1080-4c86-a860-66165cffe96e" width="250" height="500" alt="12">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/d8920975-fc1a-41fe-9a8c-7febaf66ceb1" width="250" height="500" alt="13">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/08576a89-931c-4c3e-9dc7-ebafde61699d" width="250" height="500" alt="14">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/501584f9-921b-47bf-a9cc-434a4e35acb5" width="250" height="500" alt="15">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/3763faa1-4936-4119-99c5-44f6d037f642" width="250" height="500" alt="16">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/9c6165fb-599b-4943-adf8-14c26a73a745" width="250" height="500" alt="17">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/89b58156-76f1-477f-8a1f-74d20fac4bae" width="250" height="500" alt="18">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/7d4f73e6-04fc-4b7a-8506-a34d3c246b0d" width="250" height="500" alt="19">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/12c21f4a-1439-445a-9a9b-e05402a3193c" width="250" height="500" alt="20">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/14b2df6e-0578-4def-9669-05737a9cc6a4" width="250" height="500" alt="21">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/7b1b8e10-eaa3-4edb-a482-2f42e560773b" width="250" height="500" alt="22">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/afbd068f-421e-42bf-9ea3-0c3603764f7b" width="250" height="500" alt="23">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/137f7d67-d8be-4867-82fd-ce18e4d13f27" width="250" height="500" alt="24">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/4541fdb6-1367-4d43-a034-3b508d96e0c1" width="250" height="500" alt="25">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/94d611b6-5b6b-4862-8296-cb98a42eb91e" width="250" height="500" alt="26">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/7bad52c4-223f-4f48-8c69-afbb5b887df6" width="250" height="500" alt="27">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/afb56d44-8f71-4240-aa33-579e11d02111" width="250" height="500" alt="28">
-<img src="https://github.com/matt158x/Healthly-Mobile-Application/assets/120200858/afaac2f1-d85a-4ae6-b297-fdc959c2fdbc" width="250" height="500" alt="Updated HomePage">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/f35f88be-45b9-45ef-934d-51e4d8d0a9b3" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/245be352-186b-42e9-a3ee-910be8ffbd08" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/bd08d36c-6a50-48ff-b979-5e7965d7ce8b" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/a9b626af-cd9c-43fc-81c1-97acc7cba022" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/e955b982-e74b-443a-8252-20713cf7ffa2" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/14e74522-fb83-4681-ba2c-2343d159ee6d" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/e7acd933-6944-447e-9bc5-506ad7541e0d" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/1e0003c7-e7e6-457a-b1a8-924f04e12ad5" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/a42f29a0-5c02-4cf7-a6da-4d4f50621723" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/3645e825-337d-4eaf-8f73-441f4f306b50" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/14ecdad8-91db-41e5-bf6d-b1ca97a98e35" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/835ee166-bece-4a5b-9639-dd2d9fe2d1e9" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/2e2133cd-b010-46aa-a98f-640343e8b086" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/d8062b0e-a959-4dbd-8f40-942aebbe9349" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/eae788d9-d9ad-4aac-bea6-a9ae0c3f007c" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/da3e01e2-3a2d-4087-817c-368fe04fee4e" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/ffbc22ce-9c0e-4688-ba6d-3fdde15f8d55" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/c9ace043-87cd-49f6-b960-839e70eb0bb7" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/acaed74d-01ee-431f-90bb-055b982b55e8" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/5adb7f34-8246-4c44-ae9a-cb914f37bfe4" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/474080b0-cb73-4320-8a58-3077ecfa2f2a" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/0029fc1d-2403-44aa-a47f-9871935d79cc" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/e9f0d3c3-e33e-401c-952f-c602dba2d891" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/5217bd52-017a-452d-b4f8-d28219625f40" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/8937e97f-11bd-4c78-8a81-cf71c7ade551" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/aed325a9-549e-41eb-ab03-4d13ee081746" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/5f3c3da0-de54-4823-b9d4-4624041b2c8a" width="250" height="500">
+<img src="https://github.com/matt158x/HealthlyMobileApp/assets/120200858/d54421cb-2ca9-41c8-8de6-835bdd9b9c2b" width="250" height="500">
